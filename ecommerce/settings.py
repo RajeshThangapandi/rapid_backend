@@ -139,7 +139,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://ascclient-rajeshs-projects-65e14dfb.vercel.app",
-    'https://server-ophc.onrender.com',
+    'rapid-backend-bxtu.onrender.com',
     "https://rapidclient.netlify.app"
 ]
-ALLOWED_HOSTS = ['0.0.0.0','localhost', 'server-ophc.onrender.com', '127.0.0.1', 'localhost:3000','https://rapidclient.netlify.app/']
+ALLOWED_HOSTS = ['0.0.0.0','localhost', 'rapid-backend-bxtu.onrender.com', '127.0.0.1', 'localhost:3000','https://rapidclient.netlify.app/']
