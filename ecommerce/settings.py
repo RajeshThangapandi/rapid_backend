@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import dj_database_url
 from pathlib import Path
+from pymongo import MongoClient
+
+
+MONGO_CLIENT = MongoClient('mongodb+srv://db_user_read:LdmrVA5EDEv4z3Wr@cluster0.n10ox.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+MONGO_DB = MONGO_CLIENT['RQ_Analytics']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -57,7 +62,7 @@ MIDDLEWARE = [
      "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
-ROOT_URLCONF = "analytics.urls"
+ROOT_URLCONF = "ecommerce.urls"
 
 TEMPLATES = [
     {
@@ -133,6 +138,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-   "https://rapidclient.netlify.app",
+    "https://ascclient-rajeshs-projects-65e14dfb.vercel.app",
+    'https://server-ophc.onrender.com',
+    "https://rapidclient.netlify.app"
 ]
-ALLOWED_HOSTS = ['0.0.0.0','localhost', 'server-ophc.onrender.com', '127.0.0.1', 'localhost:3000','https://ascclient-rajeshs-projects-65e14dfb.vercel.app/']
+ALLOWED_HOSTS = ['0.0.0.0','localhost', 'server-ophc.onrender.com', '127.0.0.1', 'localhost:3000','https://rapidclient.netlify.app/']
